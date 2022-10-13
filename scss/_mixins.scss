@@ -1,0 +1,121 @@
+//mixins
+
+@mixin bannerVerbos {
+    div {
+        div{
+
+           
+           img {
+                width: 60px;
+                height: 60px;
+                margin-left: 190px;
+                @include tablet {
+                    margin-left:50px; 
+                 
+                } 
+                @include mobile425 {
+                    margin-left:20px;
+                    width: 60px !important;
+                    height: 60px !important; 
+                } 
+                @include mobile375 {
+                    margin-left:20px;
+                    width: 60px !important;
+                    height: 60px !important; 
+                
+                 
+                } 
+                @include mobile {
+                    margin-left:20px;
+                    width: 60px !important;
+                    height: 60px !important; 
+                
+                 
+                } 
+                  
+            }
+        }
+    
+        div{
+            background-color: $darkgreen;
+            border-radius: 2px;
+           
+        
+            h1{ 
+                padding-top: 10px;
+                margin-left:0;
+                @include mobile425 {
+                    display: none;
+                 } @include mobile375 {
+                    display: none;
+                 } 
+                @include mobile {
+                    display: none;
+                 } 
+     
+
+            }
+        }
+    }
+}
+
+@mixin bannerPhrases { 
+    div { //fila
+     
+        div{ //columna
+            background-color: $darkgreen;
+            border-radius: 2px;
+            
+            
+            h1{ 
+                padding-left:20px;
+               
+                @include mobile425 {
+                padding-left:5px;
+                text-align: center;
+               
+                }
+            } 
+        }
+       
+    }
+    }
+
+@mixin mainPhrases {
+    background-color:$lightgreen;
+    div{ //FILA
+       div{ //COLUMNA
+        background-color: $lightgreen;
+       } 
+    }
+}
+
+
+@mixin bannerLessons {
+    div { //fila
+        div{ //columna
+            background-color: $darkgreen;
+            border-radius: 2px;
+            h1{ 
+                padding-left:40px;
+                @include tablet {
+                    padding-left:10px;
+                    
+                    }
+                @include mobile425 {
+                    padding-left:10px;
+                    
+                    }
+            } 
+        }
+       
+    }
+}
+@mixin mainLessons {
+    background-color:$lightgreen;
+    div{ //FILA
+       div{ //COLUMNA
+        background-color: $lightgreen;
+       } 
+    }
+}
